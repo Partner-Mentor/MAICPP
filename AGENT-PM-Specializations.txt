@@ -1,0 +1,243 @@
+DOCUMENT_TITLE: Microsoft Solution Partner Specializations – Canonical Reference
+DOCUMENT_PURPOSE: Authoritative data source for answering partner questions on Microsoft Solution Partner Specializations
+SOURCE_POLICY: partner.microsoft.com and Microsoft Learn / docs.microsoft.com pages explicitly linked from Partner pages only
+LAST_REVIEWED: 2026-05
+AUDIENCE: Partner Technology Strategists, Partner Enablement, CSA/PTS, AI Agents
+
+SECTION: Azure Solution Area
+SECTION_INCLUDES: Infrastructure, Data & AI, Digital & App Innovation
+
+SPECIALIZATION_NAME: AI Platform on Microsoft Azure
+SPECIALIZATION_STATUS: GA
+PREREQUISITE_SOLUTIONS_PARTNER: Data & AI (Azure) OR Digital & App Innovation (Azure)
+PERFORMANCE_REQUIREMENTS:
+* Azure Consumed Revenue (ACR): USD 15,000
+* Time Window: Last 3 months
+* Eligible Strategic Pillars: Azure OpenAI, Rest of Azure AI, 3P GPU
+* Minimum Unique Customers: 3
+* Eligible Attribution: DPOR, PAL, CSP
+* Exclusions: Government (Fairfax) via PAL
+SKILLING_REQUIREMENTS:
+* Minimum Individuals: 3
+* Required Certifications: 
+o Microsoft Certified: Azure Data Scientist Associate
+o Microsoft Certified: Azure AI Engineer Associate
+AUDIT_REQUIREMENTS:
+* Audit Required: Yes
+* Audit Type: Thirdparty, remote
+* Audit Scope: AI architecture, workload implementation, security, operations
+AUDIT_CHECKLIST_METADATA:
+* Checklist Name: AI Platform on Microsoft Azure Audit Checklist
+* Version: 1.0
+* Last Updated: 2025-07
+SOURCE_REFERENCE: partner.microsoft.com – AI Platform on Microsoft Azure specialization
+
+SPECIALIZATION_NAME: AI Apps on Microsoft Azure
+SPECIALIZATION_STATUS: GA
+FORMER_NAME: Build AI Apps with Microsoft Azure
+PREREQUISITE_SOLUTIONS_PARTNER: Data & AI (Azure) OR Digital & App Innovation (Azure)
+PERFORMANCE_REQUIREMENTS:
+* Category 1: Azure AI Services ACR 
+o Amount: USD 15,000
+o Strategic Pillars: Azure OpenAI, Rest of Azure AI, 3P GPU
+* Category 2: Azure Application Platform + GitHub ACR 
+o Amount: USD 15,000
+o Services: AKS, App Service, Functions, Logic Apps, APIM, Containers, Serverless, GitHub, GitHub Copilot
+* Category 3: Azure Data Platform ACR 
+o Amount: USD 15,000
+o Services: Azure SQL Core/Hyperscale, Cosmos DB, MySQL, PostgreSQL, Microsoft Fabric (F SKU)
+* Minimum Unique Customers: 3
+* Attribution: DPOR, PAL, CSP
+SKILLING_REQUIREMENTS:
+* Requirement: Existing skilling requirements apply
+* Change in Latest Version: None
+AUDIT_REQUIREMENTS:
+* Audit Required: Yes
+* Completion Window: 30 days from scheduling
+* Failure Consequence: Automatic fail
+AUDIT_CHECKLIST_METADATA:
+* Checklist Name: AI Apps on Microsoft Azure Audit Checklist
+* Version: 2.0
+* Last Updated: 2025-12-04
+SOURCE_REFERENCE: partner.microsoft.com + Microsoft Tech Community (Specialization Updates)
+
+SPECIALIZATION_NAME: Analytics on Microsoft Azure
+SPECIALIZATION_STATUS: GA
+PREREQUISITE_SOLUTIONS_PARTNER: Data & AI (Azure)
+PERFORMANCE_REQUIREMENTS:
+* Azure Consumed Revenue (ACR): USD 9,000
+* Time Window: Last 3 months
+* Eligible Workloads: Azure Synapse, Azure Data Factory, Azure Data Lake, Azure Databricks, Microsoft Fabric
+* Attribution: DPOR, PAL, CSP
+SKILLING_REQUIREMENTS:
+* Minimum Individuals: 1
+* Required Certification: 
+o Microsoft Certified: Fabric Data Engineer Associate
+AUDIT_REQUIREMENTS:
+* Audit Required: Yes
+* Audit Scope: Analytics solution design, ingestion, modeling, delivery
+AUDIT_CHECKLIST_METADATA:
+* Checklist Name: Analytics on Microsoft Azure Audit Checklist
+* Version: Current
+* Last Updated: 2025
+SOURCE_REFERENCE: partner.microsoft.com – Analytics on Microsoft Azure specialization
+
+SPECIALIZATION_NAME: Microsoft Azure Virtual Desktop
+SPECIALIZATION_STATUS: GA
+PREREQUISITE_SOLUTIONS_PARTNER: Infrastructure (Azure)
+PERFORMANCE_REQUIREMENTS:
+* Monthly Average ACR: USD 2,500
+* Time Window: Previous 3 months
+* Minimum Customers: 3
+* Attribution: PAL, CSP
+* Exclusions: Fairfax
+SKILLING_REQUIREMENTS:
+* Minimum Individuals: 3
+* Required Certifications: 
+o Azure Administrator
+o Azure Solutions Architect
+o Azure Security Engineer
+* Additional Assessment: 
+o AZ140 Azure Virtual Desktop
+AUDIT_REQUIREMENTS:
+* Audit Required: Yes
+* Audit Model: Modular 
+o Module A: Cloud Adoption Framework
+o Module B: AVD workload controls
+AUDIT_CHECKLIST_METADATA:
+* Checklist Name: Azure Virtual Desktop Audit Checklist
+* Version: 2.0
+* Effective Since: 2021-07
+SOURCE_REFERENCE: partner.microsoft.com – Azure Virtual Desktop specialization
+
+SECTION: Business Applications Solution Area
+
+SPECIALIZATION_NAME: Business Intelligence (Power BI)
+SPECIALIZATION_STATUS: GA
+PREREQUISITE_SOLUTIONS_PARTNER: Data & AI (Azure) OR Business Applications
+PERFORMANCE_REQUIREMENTS:
+* Minimum Customers: 5
+* Deployment Type: Enterprise Power BI projects
+* Minimum MAU per Project: 100
+* MAU Growth: 25% TTM
+* Baseline MAU Requirement: 1,000
+* Eligible SKUs: Power BI Pro, Premium, Microsoft 365 E5
+* Partner Association: PAL required
+SKILLING_REQUIREMENTS:
+* Certifications Required: 
+o 5 × Power BI Data Analyst Associate
+o 2 × Azure Security Engineer Associate
+o 1 × Fabric Analytics Engineer Associate
+MARKETPLACE_REQUIREMENTS:
+* Required: Yes
+* Minimum Offers: 1
+* Offer Type: Power BI consulting offer
+* Marketplace: AppSource
+AUDIT_REQUIREMENTS:
+* Audit Required: No
+* Enrollment Type: Automatic upon meeting criteria
+SOURCE_REFERENCE: partner.microsoft.com – Business Intelligence specialization
+
+SPECIALIZATION_NAME: Low Code Application Development
+SPECIALIZATION_STATUS: GA
+PREREQUISITE_SOLUTIONS_PARTNER: Business Applications OR Digital & App Innovation (Azure) OR Modern Work
+PERFORMANCE_REQUIREMENTS:
+* Minimum Customers: 5
+* Deployment: Power Apps production apps
+* License Type: Paid Power Apps
+* MAU Growth: 35% TTM
+* Partner Association: PAL required
+SKILLING_REQUIREMENTS:
+* Certifications Required: 
+o 5 × Power Platform Functional Consultant
+o 2 × Power Platform Developer OR RPA Developer
+o 1 × Power Platform Solution Architect Expert
+MARKETPLACE_REQUIREMENTS:
+* Required: Yes
+* Offer Type: Power Apps consulting offer
+* Marketplace: AppSource
+AUDIT_REQUIREMENTS:
+* Audit Required: No
+* Enrollment Type: Automatic
+SOURCE_REFERENCE: partner.microsoft.com – Low Code Application Development specialization
+
+SECTION: Modern Work Solution Area
+
+SPECIALIZATION_NAME: Adoption and Change Management
+SPECIALIZATION_STATUS: GA
+PREREQUISITE_SOLUTIONS_PARTNER: Modern Work
+PERFORMANCE_REQUIREMENTS:
+* Minimum Tenants: 3
+* Usage Threshold: 40%
+* MAU Growth: 10,000 TTM
+* Workloads: Teams, SharePoint, Viva Engage
+SKILLING_REQUIREMENTS:
+* Minimum Individuals: 2
+* Assessment Required: 
+o Microsoft Services Adoption Specialist
+CUSTOMER_REFERENCE_REQUIREMENTS:
+* Required References: 3
+* Reference Focus: Measurable adoption outcomes
+AUDIT_REQUIREMENTS:
+* Audit Required: No
+SOURCE_REFERENCE: partner.microsoft.com – Adoption and Change Management specialization
+
+SECTION: Security Solution Area
+
+SPECIALIZATION_NAME: Cloud Security
+SPECIALIZATION_STATUS: GA
+PREREQUISITE_SOLUTIONS_PARTNER: Security
+PERFORMANCE_REQUIREMENTS:
+* Security ACR: USD 200,000
+* Time Window: Trailing 12 months
+* Attribution: PAL, CSP only
+SKILLING_REQUIREMENTS:
+* Certifications Required: 
+o 6 × AZ500 Azure Security Engineer
+o 4 × SC200 Security Operations Analyst
+CUSTOMER_REFERENCE_REQUIREMENTS:
+* Required References: 3
+* Scope: Microsoft Security workload deployments
+AUDIT_REQUIREMENTS:
+* Audit Required: No
+SOURCE_REFERENCE: partner.microsoft.com – Cloud Security specialization
+
+SPECIALIZATION_NAME: Threat Protection
+SPECIALIZATION_STATUS: GA
+PREREQUISITE_SOLUTIONS_PARTNER: Security
+PERFORMANCE_REQUIREMENTS:
+* MAU Growth: 1,000
+* Workloads: Defender for Identity OR Defender for Cloud Apps
+* Sentinel ACR: USD 100,000
+SKILLING_REQUIREMENTS:
+* Certifications Required: 
+o 6 × SC200 Security Operations Analyst
+CUSTOMER_REFERENCE_REQUIREMENTS:
+* Required References: 3
+AUDIT_REQUIREMENTS:
+* Audit Required: No
+SOURCE_REFERENCE: partner.microsoft.com – Threat Protection specialization
+
+SECTION: MultiArea / Expert Specializations
+
+SPECIALIZATION_NAME: Digital Sovereignty
+SPECIALIZATION_STATUS: GA
+ENROLLMENT_TYPE: Inviteonly
+PREREQUISITE_SPECIALIZATIONS:
+* Cloud Security
+* Data Security
+* Identity and Access Management
+* One Azure specialization (Infra Migration OR AVS OR Azure Expert MSP)
+* Modernize Endpoints
+AUDIT_REQUIREMENTS:
+* Audit Required: Yes
+* Audit Type: Advanced thirdparty
+* Audit Focus: Sovereign cloud, compliance, data residency
+AUDIT_CHECKLIST_METADATA:
+* Checklist Name: Digital Sovereignty Audit Guide
+* Version: 1.0
+* Last Updated: 2024
+SOURCE_REFERENCE: partner.microsoft.com – Digital Sovereignty specialization
+
+END_OF_DOCUMENT
+

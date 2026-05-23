@@ -1,0 +1,253 @@
+PROGRAM_OVERVIEW:
+The Microsoft AI Cloud Partner Program (formerly Microsoft Cloud Partner Program, as of Oct 2022) replaced the legacy 18 Gold and Silver competencies with six **Solutions Partner** designations, each aligned to a specific high-demand cloud solution area:
+- Data & AI (Azure)
+- Infrastructure (Azure)
+- Digital & App Innovation (Azure)
+- Modern Work
+- Business Applications
+- Security
+
+GLOBAL_REQUIREMENTS:
+- **PROGRAM_ENROLLMENT:** Must be an active member of the Microsoft AI Cloud Partner Program with a valid Partner Center account.
+- **PARTNER_CAPABILITY_SCORE (PCS):** Must achieve at least **70 out of 100 points** in the chosen solution area to attain the designation.
+- **METRIC_MINIMUM_POINTS:** Must earn **more than 0 points in every individual metric** category (no metric can remain at 0 points).
+- **SCORING_CATEGORIES:** Points are measured automatically in Partner Center across three categories – **Performance, Skilling, and Customer Success** – using key metrics recorded from partner activities and achievements.
+
+TRACK_CLASSIFICATION:
+- **Azure Solution Areas (Data & AI, Infrastructure, Digital & App Innovation):** A partner is classified as **SMB track** if their total **Azure Consumed Revenue (ACR)** over the last 12 months is **< USD 1,000,000** **AND** **> 80%** of their customers are in the SMB segment. Otherwise, the partner is on the **Enterprise track**. (ACR is calculated from CSP direct & indirect, Digital Partner of Record (DPOR), and Partner Admin Link (PAL) associations.)
+- **Business Applications:** Partner is classified as Enterprise track if they have **≥ 5 unique workloads** that each contribute **> USD 5,000 in revenue per customer tenant** in both month (current month–1) and month (current month–13). Otherwise, track classification is SMB.
+- **Modern Work:** Partner performance is automatically **evaluated on both Enterprise and SMB paths** for each metric. The partner’s overall score for Modern Work is based on the **higher scoring path** (Enterprise vs. SMB) at the **solution area level** (not on a per-metric basis).
+- **Security:** Similar to Modern Work, partner performance is evaluated on **both tracks** (Azure-based vs. Microsoft 365-based engagement) and the combination that yields the higher overall Security score will be used. 
+
+QUALIFICATION_WINDOW_AND_RENEWAL:
+- **NEW_PARTNER_ELIGIBILITY_WINDOW:** After purchasing a Solutions Partner designation, **new partners** have a qualification window spanning the **current month + the previous 5 months** to achieve Qualified status (≥ 70 points, all metrics > 0 at least once) in the target solution area.
+- **RENEWAL_WINDOW_EXISTING_PARTNERS:** **Existing Solutions Partners** (already holding a designation) must qualify annually by achieving ≥ 70 points with no zero metrics during the 6-month window ending in their **anniversary (renewal) month**. Designations are valid for 1 year from attainment and must be renewed each year.
+- **CROSS_ENROLLMENT:** If a partner already holds a Solutions Partner designation in one area and subsequently achieves Qualified status in another area during their eligibility window, they are **automatically enrolled** in the new solution area’s designation **without additional purchase**.
+- **RENEWAL_GRACE_PERIOD:** There is a **30-day renewal grace period** following the anniversary date. If a partner fails to requalify within that window, the designation lapses and a new purchase/enrollment is required to regain it.
+- **GOVERNMENT_CUSTOMERS:** Government/sovereign cloud customers in **public/commercial** cloud environments are **included** in partner scoring. Government customers in non-public clouds (e.g., US Gov, China) are **excluded** from scoring metrics.
+
+SOLUTION_AREA: Data & AI (Azure)
+PREREQUISITES: Active MAICPP enrollment; ≥ 2 individuals with **Azure Administrator Associate** certification (prerequisite for intermediate skilling points); ≥ 2 individuals with **Azure Solutions Architect Expert** certification (prerequisite for advanced skilling points).
+METRIC_NAME: Performance — Net Customer Adds
+DESCRIPTION: Each net-new Azure customer (meeting eligibility criteria) contributes 10 points towards the Partner Capability Score.
+MAX_POINTS: 30
+CALCULATION: Net new customers added = (Eligible customers at end of last month) − (Eligible customers 12 months ago).
+THRESHOLDS_BY_TRACK: Enterprise – customer tenant must have ≥ USD 1,000 ACR in at least one of the last 2 months to count as eligible; SMB – customer tenant must have ≥ USD 500 ACR in at least one of the last 2 months.
+ELIGIBLE_WORKLOADS: All Azure “Service Level 2” services (all Azure services eligible; list subject to change).
+ELIGIBLE_OFFERS: All offers except Support, Internal, Benefit (Partner) Program, and Trial offers.
+ELIGIBLE_ASSOCIATION_TYPES: CSP (Direct Tier 1 & Indirect Tier 2), Digital Partner of Record (DPOR), Partner Admin Link (PAL).
+METRIC_NAME: Skilling — Intermediate Certifications
+DESCRIPTION: Awards points for intermediate (associate-level) certifications held by employees, reflecting the partner’s technical expertise. **NOTE:** Uses a two-step prerequisite model.
+MAX_POINTS: 20
+PREREQUISITES: ≥ 2 individuals must hold **Azure Administrator Associate** certification (Step 1 prerequisite; yields 0 points on its own, but required to earn any intermediate certification points).
+SCORING_RULES: Once prerequisite is met, each qualified individual with a **Data & AI** associate-level certification yields 4 points; up to 5 individuals count (5 × 4 = 20 points). Individuals are counted once each (holding multiple associate certs still counts as one individual).
+QUALIFYING_CERTIFICATIONS: Azure Database Administrator Associate; Azure AI Engineer Associate; Azure Data Scientist Associate; Azure Data Engineer Associate; Microsoft Certified: Data Analyst Associate (Power BI).
+METRIC_NAME: Skilling — Advanced Certifications
+DESCRIPTION: Awards points for advanced (expert or specialty-level) certifications held by employees. **NOTE:** Uses a two-step prerequisite model.
+MAX_POINTS: 20
+PREREQUISITES: ≥ 2 individuals must hold **Azure Solutions Architect Expert** certification (Step 1 prerequisite; required to earn any advanced certification points).
+SCORING_RULES: Once prerequisite is met, each qualified individual with a **Data & AI** expert or specialty certification yields 4 points; up to 5 individuals count (5 × 4 = 20 points). Individuals can be the same or different from those counted in Intermediate, but only counted once per metric.
+QUALIFYING_CERTIFICATIONS: Customer Data Platform Specialty; Azure Cosmos DB Developer Specialty.
+METRIC_NAME: Customer Success — Usage Growth
+DESCRIPTION: Measures growth in aggregated Azure Consumed Revenue (ACR) for Azure workloads under management.
+MAX_POINTS: 20
+CALCULATION: **Percentage ACR growth** = [(Total qualifying ACR last month − Total qualifying ACR in same month 12 months prior) ÷ (Total ACR 12 months prior)] × 100.
+THRESHOLD: Partner’s total qualifying ACR must be ≥ USD 1,000 (baseline) for usage growth to be scored.
+ELIGIBLE_WORKLOADS: All Azure “Service Level 2” services.
+ELIGIBLE_ASSOCIATION_TYPES: CSP (Tier 1, Tier 2); Digital Partner of Record (DPOR); Partner Admin Link (PAL).
+METRIC_NAME: Customer Success — Deployments
+DESCRIPTION: Measures the number of distinct Azure service **deployments** (unique Azure workloads) that the partner’s customers actively used (with >0 ACR) in the past 12 months.
+MAX_POINTS: 10
+SCORING_RULES: 2 points per distinct qualifying Azure service deployed; maximum of 5 new deployments (5 × 2 = 10 points).
+ELIGIBLE_WORKLOADS: All Azure “Service Level 2” services except **Virtual Machines** and **Virtual Machine Licenses** (these two are excluded from counting).
+NOTE: Sum of max points across all metrics in Data & AI = 30 (Performance) + 20 (Intermediate Skilling) + 20 (Advanced Skilling) + 20 (Usage Growth) + 10 (Deployments) = 100 total points.
+SPECIALIZATIONS (Optional): Partners who attain the Data & AI designation can pursue advanced specializations such as **Analytics on Microsoft Azure**, **AI and Machine Learning on Microsoft Azure**, **Data Warehouse Migration to Microsoft Azure**, **Build and Modernize AI Apps with Microsoft Azure**, **Infra and Database Migration to Microsoft Azure**, **Kubernetes on Microsoft Azure**, **Migrate Enterprise Apps to Microsoft Azure**. Up to **5** such specializations tied to Azure solution areas can receive additional benefits.
+
+SOLUTION_AREA: Infrastructure (Azure)
+PREREQUISITES: Active program enrollment; ≥ 2 Azure Administrator Associates; ≥ 2 Azure Solutions Architect Experts (identical to Data & AI prerequisites).
+METRIC_NAME: Performance — Net Customer Adds
+DESCRIPTION: Each net-new Azure customer (meeting eligibility criteria) contributes 10 points; max 30. (Same method as Data & AI Performance metric.)
+MAX_POINTS: 30
+THRESHOLDS_BY_TRACK: Enterprise – ≥ USD 1,000 ACR (one of last 2 months); SMB – ≥ USD 500 ACR (one of last 2 months).
+ELIGIBLE_WORKLOADS: All Azure Service Level 2 services.
+ELIGIBLE_ASSOCIATION_TYPES: CSP (T1, T2); DPOR; PAL.
+ELIGIBLE_OFFERS: All offers except Support, Internal, Benefit Program, Trial.
+METRIC_NAME: Skilling — Intermediate Certifications
+DESCRIPTION: Awards points for intermediate (associate-level) certifications (two-step model; prerequisite then points).
+MAX_POINTS: 20
+PREREQUISITES: ≥ 2 individuals with **Azure Administrator Associate** (Step 1; required).
+SCORING_RULES: Each qualifying person with an **Infrastructure** associate-level certification = 4 points; max 5 persons for full 20 points.
+QUALIFYING_CERTIFICATIONS: Azure Network Engineer Associate; Azure Stack Hub Operator Associate; Windows Server Hybrid Administrator Associate _(retired July 31, 2023; qualifies until July 2024)_.
+METRIC_NAME: Skilling — Advanced Certifications
+DESCRIPTION: Awards points for advanced (expert/specialty-level) certifications (two-step model).
+MAX_POINTS: 20
+PREREQUISITES: ≥ 2 individuals with **Azure Solutions Architect Expert** (required).
+SCORING_RULES: Each qualifying person with an **Infrastructure** expert or specialty certification = 4 points; max 5 persons for full 20 points.
+QUALIFYING_CERTIFICATIONS: Azure Virtual Desktop Specialty; Azure for SAP Workloads Specialty.
+SCORING_NOTES: For both Intermediate and Advanced certification metrics – examples:
+- If exactly 2 people complete prerequisite (Step 1) and 2 different people hold qualifying certifications (Step 2), score = 2 × 4 = 8 points.
+- If 2 people fulfill both Step 1 and Step 2 (same two individuals hold prerequisite and qualifying certs), score = 2 × 4 = 8 points.
+- If 1 person has met the prerequisite (Step 1) and 2 other people hold qualifying certs (Step 2) but only 1 person has the prerequisite, no points are earned until a second person meets the prerequisite. Once the second person achieves the prerequisite, the 2 qualifying individuals from Step 2 yield 2 × 4 = 8 points.
+METRIC_NAME: Customer Success — Usage Growth
+DESCRIPTION: Growth in Azure Consumed Revenue (ACR) from Azure infrastructure services (1% ACR growth = 1 point).
+MAX_POINTS: 20
+THRESHOLD: Partner’s total ACR must be ≥ USD 1,000 baseline to earn points for growth.
+ELIGIBLE_WORKLOADS: All Azure infrastructure service workloads (Service Level 2 services).
+ELIGIBLE_ASSOCIATION_TYPES: CSP (T1, T2); DPOR; PAL.
+METRIC_NAME: Customer Success — Deployments
+DESCRIPTION: Number of new Azure infrastructure service deployments (unique services) with active usage by customers.
+MAX_POINTS: 10
+SCORING_RULES: 2 points per new Azure infrastructure service deployment; max 5 deployments for full 10 points (excluding Virtual Machines and VM Licenses).
+SPECIALIZATIONS (Optional): Advanced specializations include **Microsoft Azure VMware Solution**, **Azure Virtual Desktop**, **Networking Services in Microsoft Azure**, **SAP on Microsoft Azure**, **Hybrid Cloud Infrastructure with Microsoft Azure Stack HCI** (up to 5 specializations can receive benefits in Azure solution areas).
+
+SOLUTION_AREA: Digital & App Innovation (Azure)
+PREREQUISITES: Active program enrollment; ≥ 2 Azure Administrator Associates; ≥ 2 Azure Solutions Architect Experts (same prerequisites as Data & AI).
+METRIC_NAME: Performance — Net Customer Adds
+DESCRIPTION: Each net-new Azure customer (meeting eligibility criteria) contributes 10 points; max 30. (Same as other Azure solution areas.)
+MAX_POINTS: 30
+THRESHOLDS_BY_TRACK: Enterprise – ≥ USD 1,000 ACR (in one of last 2 months); SMB – ≥ USD 500 ACR (in one of last 2 months).
+ELIGIBLE_WORKLOADS: All Azure Service Level 2 services.
+ELIGIBLE_ASSOCIATION_TYPES: CSP (T1, T2); DPOR; PAL.
+METRIC_NAME: Skilling — Intermediate Certifications
+DESCRIPTION: Awards points for intermediate (associate-level) certifications (two-step model).
+MAX_POINTS: 20
+PREREQUISITES: ≥ 2 individuals with **Azure Administrator Associate** (required).
+SCORING_RULES: Each qualifying person with a **Digital & App Innovation** associate-level certification = 4 points; max 5 persons for full 20 points.
+QUALIFYING_CERTIFICATIONS: Azure Developer Associate; Power Platform Developer Associate.
+METRIC_NAME: Skilling — Advanced Certifications
+DESCRIPTION: Awards points for advanced (expert/specialty-level) certifications (two-step model).
+MAX_POINTS: 20
+PREREQUISITES: ≥ 2 individuals with **Azure Solutions Architect Expert** (required).
+SCORING_RULES: Each qualifying person with a **Digital & App Innovation** expert or specialty certification = 4 points; max 5 persons (20 points).
+QUALIFYING_CERTIFICATIONS: Azure IoT Developer Specialty; Azure DevOps Engineer Expert; Power Platform Solution Architect Expert.
+METRIC_NAME: Customer Success — Usage Growth
+DESCRIPTION: Growth in Azure Consumed Revenue from eligible Azure application innovation workloads (1% ACR growth = 1 point).
+MAX_POINTS: 20
+THRESHOLD: Total ACR must be ≥ USD 1,000 baseline to earn points.
+ELIGIBLE_WORKLOADS: All Azure Service Level 2 services.
+ELIGIBLE_ASSOCIATION_TYPES: CSP (T1, T2); DPOR; PAL.
+METRIC_NAME: Customer Success — Deployments
+DESCRIPTION: Number of new Azure service *application* deployments (unique Azure workloads) with active usage by customers.
+MAX_POINTS: 10
+SCORING_RULES: 2 points per new Azure service deployment; max 5 deployments for full 10 points (excluding Virtual Machines / VM Licenses).
+SPECIALIZATIONS (Optional): Advanced specializations include **DevOps with GitHub on Microsoft Azure**, **Kubernetes on Microsoft Azure** (shared with Data & AI), **Migrate Enterprise Apps to Microsoft Azure** (shared with Data & AI).
+
+SOLUTION_AREA: Modern Work
+PREREQUISITES: Active program enrollment in MAICPP. (Minimum 1 intermediate and 1 advanced certified individual required to avoid a zero in one of the skilling sub-metrics.)
+METRIC_NAME: Performance — Net Customer Adds
+DESCRIPTION: Measures growth of customer base in Microsoft 365. New customer tenants are counted under both Enterprise and SMB tracks; partner is awarded points using the track that yields the higher total score.
+MAX_POINTS: 20
+THRESHOLDS_BY_TRACK: **Enterprise track** – 4 points per net-new customer, up to 5 customers (20 points). **SMB track** – 2 points per net-new customer, up to 10 customers (20 points).
+CALCULATION: Net customer adds = (total qualifying customer tenants at end of last month) − (total qualifying customer tenants 12 months prior).
+ELIGIBLE_CUSTOMER_CRITERIA: Enterprise – each customer tenant with ≥ 1 workload **with > 300 paid licenses**. SMB – each customer tenant with ≥ 1 workload **with 11–300 paid licenses**. (If a tenant crosses above 300 licenses but was SMB in previous year, it remains eligible for SMB track scoring for one year.)
+ELIGIBLE_WORKLOADS: (Applies to both tracks) Exchange Online; Intune; Microsoft 365 Copilot; Microsoft 365 Apps; Microsoft Entra ID P1; SharePoint Online; Teams; Teams Apps; Teams for Frontline Workers; Teams Meetings; Teams Phone; Teams Phone – Calling; Teams Phone – Enabled Users; Teams Rooms (MAU); Viva Connections; Viva Engage; Viva Goals; Viva Insights; Viva Learning; Viva Topics; Windows 365.
+ELIGIBLE_ASSOCIATION_TYPES: **Enterprise:** Claiming Partner of Record (CPOR); Digital Partner of Record (DPOR). **SMB:** CPOR; Cloud Solution Provider (CSP) (Tier 1, Tier 2).
+METRIC_NAME: Skilling — Intermediate Certifications
+DESCRIPTION: Measures the number of individuals with eligible intermediate (associate-level) Microsoft 365 certifications.
+MAX_POINTS: 10
+THRESHOLDS_BY_TRACK: **Enterprise track:** 4 certified individuals = 10 points. **SMB track:** 2 certified individuals = 10 points.
+NOTE: Each certified individual counts once (multiple certs by the same person still count as one person).
+ELIGIBLE_CERTIFICATIONS: Microsoft 365 Fundamentals; Microsoft 365 Certified: Teams Application Developer Associate; Microsoft 365 Certified: Teams Administrator Associate; Microsoft 365 Certified: Messaging Administrator Associate; Microsoft Certified: Identity and Access Administrator Associate; Microsoft 365 Certified: Collaboration Communications Systems Engineer Associate; Microsoft 365 Certified: Endpoint Administrator Associate.
+METRIC_NAME: Skilling — Advanced Certifications
+DESCRIPTION: Measures the number of individuals with eligible advanced (expert-level or technical assessment) Microsoft 365 certifications.
+MAX_POINTS: 15
+THRESHOLDS_BY_TRACK: **Enterprise track:** 2 certified individuals = 15 points. **SMB track:** 1 certified individual = 15 points.
+ELIGIBLE_CERTIFICATIONS: Microsoft 365 Certified: Enterprise Administrator Expert; Teams Meetings and Meeting Rooms Technical Assessment.
+METRIC_NAME: Customer Success — Usage Growth
+DESCRIPTION: Measures growth in **Monthly Active Users (MAU)** across eligible Microsoft 365 workloads over the last year.
+MAX_POINTS: 30
+CALCULATION: Usage growth = (eligible active users last month) − (eligible active users 12 months ago).
+THRESHOLDS_BY_TRACK: **Enterprise track (association type):** CPOR – 1,000 MAU increase for 30 points; DPOR – 4,000 MAU increase for 30 points. **SMB track (association type):** CPOR – 500 MAU increase for 30 points; CSP – 2,000 MAU increase for 30 points.
+NOTE: The partner is scored on whichever association type yields a higher score (points are applied proportional to actual growth up to the maximum).
+METRIC_NAME: Customer Success — Deployments
+DESCRIPTION: Measures net new deployments of Microsoft 365 workloads with at least 40% active usage across paid licenses in eligible customer tenants (last month vs. 12 months prior).
+MAX_POINTS: 25
+CALCULATION: Net new deployments = (eligible deployments last month) − (eligible deployments 12 months ago). (Deployments claimed within the last 12 months that were already above 40% active are excluded.)
+THRESHOLDS_BY_TRACK: **Enterprise track (association type):** CPOR – 5 points per new deployment; 5 net new deployments = 25 points. **SMB track:** CPOR – 2.5 points per new deployment; 10 net new deployments = 25 points.
+NOTE: Points are awarded under the association type (CPOR vs. DPOR/CSP) that yields more points, up to 25 maximum total. Partial credit is given if fewer deployments are achieved.
+SPECIALIZATIONS (Optional): Advanced specializations include **Adoption and Change Management**, **Calling for Microsoft Teams**, **Meetings and Meeting Rooms for Microsoft Teams**, **Teamwork Deployment** (a maximum of 3 Modern Work specializations can receive benefits).
+
+SOLUTION_AREA: Business Applications
+PREREQUISITES: Active program enrollment (track classification is automatic per program rules; see Track Classification).
+METRIC_NAME: Performance — Net Customer Adds
+DESCRIPTION: Measures net new Dynamics 365/Power Platform workloads (with revenue above thresholds) added to the customer base in the past 12 months.
+MAX_POINTS: 15
+CALCULATION: Net customer adds = (count of qualifying workloads with active subscriptions > $1,500 last month) − (count of qualifying workloads with active subscriptions > $1,500 12 months ago).
+THRESHOLDS_BY_TRACK: Enterprise – customer workloads with ≥ USD 1,500 revenue per month; SMB – customer workloads with ≥ USD 250 revenue per month.
+ELIGIBLE_WORKLOADS: (Partial list) AI Builder; Business Central; Customer Engagement (CE) bundle; Commerce; Customer Insights; Customer Service; Finance & Operations (F&O) bundle; Field Service; Finance; Human Resources (HR); Intelligent Order Management; Mixed Reality; Omni Channel; Power Apps; Power Automate; Power BI; (and additional eligible workloads defined by Microsoft).
+METRIC_NAME: Skilling — Intermediate Certifications
+DESCRIPTION: Awards points for eligible intermediate (associate-level) certifications earned by individuals.
+MAX_POINTS: 20
+SCORING_RULES: Each certified individual counts once (regardless of number of certs held); up to 20 certified individuals counted (20 points).
+ELIGIBLE_CERTIFICATIONS: Dynamics 365 Functional Consultant Associate (any module: e.g., Finance, Commerce, Supply Chain Mgt, Customer Service, Sales, Field Service, Business Central, Marketing/Customer Insights Journeys); Power Platform Functional Consultant Associate; Power Platform Developer Associate; Microsoft Certified: Data Analyst Associate (Power BI); Microsoft Certified: Azure Enterprise Data Analyst Associate; Microsoft Certified: Power Automate RPA Developer Associate; Customer Insights (Data) Specialty.
+METRIC_NAME: Skilling — Advanced Certifications
+DESCRIPTION: Awards points for eligible advanced (expert-level or specialty) certifications earned by individuals.
+MAX_POINTS: 15
+SCORING_RULES: Each certified individual counts once; up to 15 individuals counted (15 points).
+ELIGIBLE_CERTIFICATIONS: (Refer to Microsoft official list for current eligible advanced certifications in Business Applications solution area.)
+METRIC_NAME: Customer Success — Usage Growth
+DESCRIPTION: Measures growth in **Monthly Consumption Value (MCV)** of Dynamics 365 & Power Platform product usage over the past year.
+MAX_POINTS: 30
+CALCULATION: Percentage consumption growth = [(eligible usage last month − eligible usage 12 months ago) ÷ (eligible usage 12 months ago)] × 100.
+THRESHOLD: Baseline MCV from last year must be ≥ 50,000 (Enterprise) or ≥ 25,000 (SMB) to earn usage growth points.
+METRIC_NAME: Customer Success — Deployments
+DESCRIPTION: Evaluates the number (and impact) of successful deployments of qualifying Dynamics 365/Power Platform solutions, as reflected in increased consumption and active usage.
+MAX_POINTS: 20
+SPECIALIZATIONS (Optional): Attaining the Business Applications designation is a prerequisite for advanced specializations (e.g., **Small and Midsize Business Management**, **Low Code Application Development**). Additionally, the **Build and Modernize AI Apps with Microsoft Azure** specialization can be earned with either a Data & AI or a Business Applications designation. Up to **3** specializations related to Business Applications can receive benefits.
+
+SOLUTION_AREA: Security
+PREREQUISITES: Active program enrollment. **Strict skilling prerequisites apply** – must have ≥ 2 individuals with **Azure Security Engineer Associate** **AND** ≥ 2 individuals with **Microsoft Security Operations Analyst** certifications (both required for any Skilling points).
+METRIC_NAME: Performance — Net Customer Adds
+DESCRIPTION: Measures net new customers in Azure Security and/or M365 Security, with track-based scoring.
+MAX_POINTS: 20
+THRESHOLDS_BY_TRACK: **Enterprise track:** 2 points per net-new security customer; 10 customers for full 20 points. **SMB track:** 4 points per net-new security customer; 5 customers for full 20 points.
+CALCULATION: Net new security customers = (total qualifying customers with security ACR (Azure) or security workloads (M365) in the last 12 months) − (total qualifying customers in previous 12 months).
+ELIGIBLE_CUSTOMER_CRITERIA: **Enterprise – Azure:** unique customer tenant with ≥ USD 600 ACR from eligible Azure security services (TTM); **Enterprise – M365:** unique customer tenant with ≥ 1 workload with > 300 paid seats in eligible M365 security products. **SMB – Azure:** (same ≥ USD 600 ACR threshold as Enterprise); **SMB – M365:** unique customer tenant with ≥ 1 workload with 5–300 paid seats in eligible M365 security products (if a customer moved to >300 from <300 in the past year, they still count as SMB for one year).
+ELIGIBLE_WORKLOADS: **Azure security services** (examples): Advanced Data Security; Advanced Threat Protection; Application Gateway; Microsoft Entra ID (Azure AD) B2C; Microsoft Entra Domain Services; Microsoft Entra ID for External Identities; Azure Bastion; Azure DDoS Protection; Azure Defender; Azure Firewall (and Firewall Manager); Azure Front Door; Azure IoT Security; Key Vault; Network Watcher; Security Center; Microsoft Sentinel. **M365 security workloads:** Microsoft Entra ID P1; Microsoft Defender for Office 365; Microsoft Defender for Endpoints (P2); Microsoft Defender for Identity; Microsoft Purview Information Protection; Intune.
+ELIGIBLE_ASSOCIATION_TYPES: **Azure:** Partner Admin Link (PAL); CSP (Tier 1 & 2). **M365:** CPOR; CSP (Tier 1 & 2).
+NOTE: Net customer adds in **both Azure and M365** categories are summed for this metric; points can come from either or both.
+METRIC_NAME: Skilling — Certifications (Intermediate & Advanced Combined)
+DESCRIPTION: Awards points for eligible **Security** certifications using a multi-step structure (no separate advanced cert metric; all 40 skilling points are in one combined metric).
+MAX_POINTS: 40
+PREREQUISITES: (Step 1) ≥ 2 individuals with **Azure Security Engineer Associate** **AND** (Step 2) ≥ 2 individuals with **Microsoft Security Operations Analyst** – both steps required to unlock any Skilling points (neither step yields points on its own).
+SCORING_RULES: Once both prerequisites are completed, each individual with any **eligible advanced Security certification** contributes **6.67 points**; ~6 individuals (Step 3 certified) for full ~40 points. Individuals can fulfill multiple steps (the same person can count towards Step 1, Step 2, and also contribute as one person in Step 3).
+QUALIFYING_CERTIFICATIONS: Microsoft Cybersecurity Architect Expert; Microsoft Certified: Identity and Access Administrator; Microsoft Information Protection Administrator _(retires May 31, 2025; if earned before retirement, counts for one year)_; Microsoft Certified: Information Security Administrator Associate.
+METRIC_NAME: Customer Success — Usage Growth
+DESCRIPTION: Measures increased consumption and active usage of Microsoft Security solutions (both Azure security services and M365 security features) over the past year.
+MAX_POINTS: ~20 (approximate)
+NOTE: Calculated via the sum of Azure security ACR growth and M365 security usage growth. Official thresholds and formulas are updated by Microsoft and may vary; partners should consult the latest Partner Center documentation.
+METRIC_NAME: Customer Success — Deployments
+DESCRIPTION: Measures additional customer deployments of Azure and/or M365 security solutions with significant active use.
+MAX_POINTS: ~20 (approximate)
+SCORING_RULES: Approx. 3.3 points per eligible new security solution deployment (across Azure or M365), up to ~20 points total.
+SPECIALIZATIONS (Optional): Advanced specializations include **Threat Protection**, **Cloud Security**, **Identity and Access Management** (maximum 3 specializations in Security can receive benefits).
+
+ADVANCED_SPECIALIZATIONS_MAPPING:
+- **AI and Machine Learning on Microsoft Azure** – requires Solutions Partner **Data & AI** (Azure) OR **Digital & App Innovation** (Azure) designation.
+- **Analytics on Microsoft Azure** – requires Solutions Partner **Data & AI** (Azure).
+- **Build and Modernize AI Apps with Microsoft Azure** – requires Solutions Partner **Data & AI** (Azure) OR **Business Applications**.
+- **Data Warehouse Migration to Microsoft Azure** – requires Solutions Partner **Data & AI** (Azure).
+- **DevOps with GitHub on Microsoft Azure** – requires Solutions Partner **Digital & App Innovation** (Azure).
+- **Hybrid Cloud Infrastructure with Microsoft Azure Stack HCI** – requires Solutions Partner **Infrastructure** (Azure) OR **Data & AI** (Azure) OR **Digital & App Innovation** (Azure).
+- **Infra and Database Migration to Microsoft Azure** – requires Solutions Partner **Data & AI** (Azure) OR **Infrastructure** (Azure).
+- **Kubernetes on Microsoft Azure** – requires Solutions Partner **Data & AI** (Azure) OR **Digital & App Innovation** (Azure).
+- **Microsoft Azure VMware Solution** – requires Solutions Partner **Infrastructure** (Azure).
+- **Azure Virtual Desktop** – requires Solutions Partner **Infrastructure** (Azure).
+- **Networking Services in Microsoft Azure** – requires Solutions Partner **Infrastructure** (Azure).
+- **SAP on Microsoft Azure** – requires Solutions Partner **Infrastructure** (Azure).
+- **Adoption and Change Management** – requires Solutions Partner **Modern Work**.
+- **Calling for Microsoft Teams** – requires Solutions Partner **Modern Work**.
+- **Meetings and Meeting Rooms for Microsoft Teams** – requires Solutions Partner **Modern Work**.
+- **Teamwork Deployment** – requires Solutions Partner **Modern Work**.
+
+MAX_SPECIALIZATIONS_BENEFITS:
+- Azure solution areas (Data & AI, Digital & App Innovation, Infrastructure) – up to 5 specializations can receive benefits.
+- Business Applications – up to 3 specializations with benefits.
+- Modern Work – up to 3 specializations with benefits.
+- Security – up to 3 specializations with benefits.
+
+RENEWAL_RULES_AND_MAINTENANCE:
+- **ANNUAL_RENEWAL:** A Solutions Partner designation must be renewed each year by again achieving ≥ 70 points (with no zero-point metrics) during the designated 6-month time window (as defined in QUALIFICATION_WINDOW above). If the renewal threshold is not met by the anniversary date + 30 days, the designation will expire (requiring a new purchase to re-enroll).
+- **NO_ZERO_METRICS:** The requirement to maintain >0 points in every metric is continuous. If any metric drops to 0 (even if the total remains ≥ 70), the partner will lose the designation until the metric is improved.
+- **CERTIFICATION_RETIREMENTS:** Microsoft may retire or replace certifications. e.g., *Microsoft Information Protection Administrator* retires on May 31, 2025, but will continue to count toward Security skilling points for one year if earned before retirement. Partners should plan certification attainment to pre-empt retirements and maintain their Skilling points.
+- **GLOBAL_CURRENCY:** All revenue and consumption thresholds (e.g., ACR, revenue, MAU counts) are denominated in U.S. Dollars (USD) and standardized worldwide.
