@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partner Mentor · MAICPP guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ms-red: #F25022; --ms-green: #7FBA00; --ms-blue: #00A4EF; --ms-yellow: #FFB900;
+    --ms-blue-dark: #0078D4;
+    --bg: #ffffff; --surface: #ffffff; --surface-soft: #fafbfc; --surface-hover: #f5f6f7;
+    --border: #e5e7eb; --border-light: #f0f2f5;
+    --text: #1a1a1a; --text-secondary: #5a6478; --text-tertiary: #8b94a6;
+    --primary: var(--ms-blue-dark); --primary-hover: #006bbd; --primary-soft: #e7f3fc;
+    --success: #107c10; --success-soft: #e8f5e8;
+    --warning: #ca5010; --warning-soft: #fff4e5;
+    --danger: #d83b01;
+    --shadow-1: 0 1px 2px rgba(15,23,42,0.04), 0 1px 3px rgba(15,23,42,0.06);
+    --shadow-2: 0 4px 12px rgba(15,23,42,0.08);
+    --radius: 8px; --radius-lg: 28px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg); color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px; line-height: 1.5; min-height: 100vh;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  .topbar { display: flex; justify-content: space-between; align-items: center; padding: 16px 32px; gap: 4px; }
+  .topbar-left, .topbar-right { display: flex; align-items: center; gap: 4px; }
+
+  /* Model selector */
+  .model-selector {
+    display: flex;
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px;
+    gap: 2px;
+  }
+  .model-btn {
+    background: transparent; border: none;
+    padding: 6px 14px;
+    font-family: inherit; font-size: 12px; font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 999px;
+    transition: all 0.15s;
+    letter-spacing: 0.2px;
+  }
+  .model-btn:hover { color: var(--text); }
+  .model-btn.active {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  }
+  .model-btn .cost { opacity: 0.7; font-size: 10px; margin-left: 4px; }
+
+  .topbar-btn { background: transparent; border: none; padding: 8px 14px; color: var(--text-secondary); font-family: inherit; font-size: 13px; cursor: pointer; border-radius: 6px; display: flex; align-items: center; gap: 8px; transition: background 0.15s, color 0.15s; }
+  .topbar-btn:hover { background: var(--surface-hover); color: var(--text); }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-tertiary); }
+  .topbar-btn.ok .status-dot { background: var(--success); }
+  .doc-pill { background: var(--primary-soft); color: var(--primary); padding: 3px 10px; border-radius: 12px; font-size: 11px; font-weight: 500; }
+  .icon-btn { background: transparent; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--text-secondary); transition: background 0.15s; }
+  .icon-btn:hover { background: var(--surface-hover); color: var(--text); }
+
+  .hero { display: flex; flex-direction: column; align-items: center; padding: 80px 24px 0; }
+  .logo-wrapper { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+
+  /* Partner Mentor logo — compass/guide mark */
+  .mentor-mark {
+    width: 48px; height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mentor-mark svg { width: 100%; height: 100%; }
+
+  .logo { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 300; letter-spacing: -1.5px; color: var(--text); }
+  .logo strong { font-weight: 600; color: var(--primary); }
+  .tagline { font-size: 13px; color: var(--text-tertiary); margin-bottom: 44px; letter-spacing: 0.2px; font-weight: 400; }
+
+  /* Footer disclaimer */
+  .footer-disclaimer {
+    max-width: 720px;
+    margin: 60px auto 0;
+    padding: 14px 20px 18px;
+    border-top: 1px solid var(--border-light);
+    font-size: 11px;
+    line-height: 1.55;
+    color: var(--text-tertiary);
+    text-align: center;
+    letter-spacing: 0.1px;
+  }
+  body.has-results .footer-disclaimer { display: none; }
+
+  .search-wrapper { width: 100%; max-width: 620px; margin-bottom: 36px; }
+  .search-box { display: flex; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 8px 18px; transition: box-shadow 0.2s, border-color 0.2s; min-height: 52px; }
+  .search-box:hover, .search-box:focus-within { box-shadow: var(--shadow-2); border-color: var(--border); }
+  .search-icon { width: 20px; height: 20px; margin: 10px 14px 0 4px; color: var(--text-tertiary); flex-shrink: 0; }
+  .search-input { flex: 1; border: none; outline: none; font-family: inherit; font-size: 16px; color: var(--text); background: transparent; padding: 11px 0; resize: none; line-height: 1.5; min-height: 24px; max-height: 220px; font-weight: 400; }
+  .search-input::placeholder { color: var(--text-tertiary); }
+  .search-clear { background: transparent; border: none; color: var(--text-tertiary); cursor: pointer; padding: 8px; border-radius: 50%; align-self: flex-start; margin-top: 4px; }
+  .search-clear:hover { background: var(--surface-hover); color: var(--text); }
+
+  .submit-btn { background: var(--primary); border: none; color: white; padding: 11px 28px; border-radius: var(--radius); font-family: inherit; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.15s; }
+  .submit-btn:hover { background: var(--primary-hover); }
+  .submit-btn:disabled { background: var(--text-tertiary); cursor: not-allowed; }
+  .actions { display: flex; justify-content: center; margin-bottom: 36px; }
+
+  .examples { display: flex; justify-content: center; flex-wrap: wrap; gap: 32px; max-width: 720px; margin: 0 auto 60px; padding: 0 24px; }
+  .example-link { background: transparent; border: none; font-family: inherit; font-size: 13px; color: var(--text-secondary); cursor: pointer; transition: color 0.15s; padding: 4px 0; border-bottom: 1px solid transparent; }
+  .example-link:hover { color: var(--primary); border-bottom-color: var(--primary); }
+
+  .settings-overlay { position: fixed; inset: 0; background: rgba(15,23,42,0.4); display: none; z-index: 100; backdrop-filter: blur(2px); }
+  .settings-overlay.open { display: block; }
+  .settings-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 100%; max-width: 480px; background: var(--bg); box-shadow: var(--shadow-2); z-index: 101; transform: translateX(100%); transition: transform 0.25s ease; overflow-y: auto; }
+  .settings-panel.open { transform: translateX(0); }
+  .settings-header { display: flex; align-items: center; padding: 20px 28px; border-bottom: 1px solid var(--border-light); position: sticky; top: 0; background: var(--bg); z-index: 1; }
+  .settings-header h2 { font-size: 18px; font-weight: 600; flex: 1; letter-spacing: -0.2px; }
+  .settings-body { padding: 28px; }
+  .field { margin-bottom: 32px; }
+  .field-label { font-size: 11px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 12px; display: block; }
+  .field-label-note { text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--text-tertiary); margin-left: 6px; }
+  .input { width: 100%; border: 1px solid var(--border); border-radius: var(--radius); padding: 11px 14px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text); outline: none; background: var(--surface); transition: border-color 0.15s, box-shadow 0.15s; }
+  .input:focus { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
+  .field-hint { font-size: 12px; color: var(--text-tertiary); margin-top: 8px; line-height: 1.5; }
+  .field-hint a { color: var(--primary); text-decoration: none; } .field-hint a:hover { text-decoration: underline; }
+
+  .doc-uploader { border: 1.5px dashed var(--border); border-radius: var(--radius); padding: 22px; text-align: center; cursor: pointer; transition: all 0.15s; background: var(--surface-soft); }
+  .doc-uploader:hover, .doc-uploader.dragging { border-color: var(--primary); background: var(--primary-soft); }
+  .doc-uploader.full { cursor: not-allowed; opacity: 0.55; background: var(--surface-soft); border-color: var(--border); }
+  .doc-uploader.full:hover { border-color: var(--border); background: var(--surface-soft); }
+  .doc-uploader-icon { width: 28px; height: 28px; margin: 0 auto 8px; color: var(--text-tertiary); }
+  .doc-uploader:hover .doc-uploader-icon, .doc-uploader.dragging .doc-uploader-icon { color: var(--primary); }
+  .doc-uploader-text { font-size: 13px; color: var(--text); font-weight: 500; }
+  .doc-uploader-hint { font-size: 11px; color: var(--text-tertiary); margin-top: 4px; }
+  .doc-loading { display: none; margin-top: 10px; font-size: 13px; color: var(--primary); text-align: center; }
+  .doc-loading.visible { display: block; }
+  .doc-list { margin-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+  .doc-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: var(--success-soft); border: 1px solid #c8e6c9; border-radius: var(--radius); font-size: 13px; }
+  .doc-item-icon { flex-shrink: 0; color: var(--success); }
+  .doc-item-info { flex: 1; min-width: 0; }
+  .doc-item-name { color: var(--text); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .doc-item-meta { color: var(--text-tertiary); font-size: 11px; margin-top: 2px; }
+  .doc-item-remove { background: transparent; border: none; color: var(--text-tertiary); cursor: pointer; padding: 4px; border-radius: 4px; display: flex; align-items: center; }
+  .doc-item-remove:hover { background: var(--surface-hover); color: var(--danger); }
+  .doc-summary { font-size: 11px; color: var(--text-tertiary); margin-top: 8px; text-align: center; }
+
+  .domain-list { display: flex; flex-direction: column; gap: 2px; }
+  .domain-row { display: flex; align-items: center; padding: 8px 12px; border-radius: 6px; cursor: pointer; transition: background 0.15s; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+  .domain-row:hover { background: var(--surface-hover); }
+  .domain-row input { margin-right: 12px; width: 15px; height: 15px; accent-color: var(--primary); cursor: pointer; }
+  .domain-row .domain-text { flex: 1; color: var(--text); }
+  .domain-row.inactive .domain-text { color: var(--text-tertiary); }
+  .domain-remove { background: transparent; border: none; color: var(--text-tertiary); cursor: pointer; padding: 3px; border-radius: 4px; display: none; }
+  .domain-row:hover .domain-remove { display: flex; align-items: center; }
+  .domain-remove:hover { color: var(--danger); }
+
+  .results { max-width: 760px; margin: 0 auto; padding: 0 32px 80px; display: none; }
+  .results.visible { display: block; }
+  .results-meta { font-size: 11px; color: var(--text-tertiary); padding: 14px 0; border-bottom: 1px solid var(--border-light); margin-bottom: 28px; display: flex; justify-content: space-between; align-items: center; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; }
+  .results-meta .model-badge { background: var(--primary-soft); color: var(--primary); padding: 2px 8px; border-radius: 4px; font-weight: 600; text-transform: none; letter-spacing: 0; }
+
+  .answer-card { background: var(--surface); border: 1px solid var(--border-light); border-radius: 14px; padding: 32px 36px; box-shadow: var(--shadow-1); }
+  .answer-card .question-label { font-size: 10px; color: var(--text-tertiary); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
+  .answer-card .question-text { font-size: 17px; color: var(--text); margin-bottom: 20px; font-weight: 400; line-height: 1.4; }
+
+  .source-badge { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 500; margin-bottom: 24px; letter-spacing: 0.3px; }
+  .source-badge.doc { background: var(--success-soft); color: var(--success); }
+  .source-badge.web { background: var(--warning-soft); color: var(--warning); }
+  .source-badge.both { background: var(--primary-soft); color: var(--primary); }
+
+  .filtered-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+    background: var(--warning-soft);
+    border: 1px solid #f4d8b3;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text);
+  }
+  .filtered-warning svg { flex-shrink: 0; color: var(--warning); margin-top: 2px; }
+  .filtered-warning strong { color: var(--warning); display: block; margin-bottom: 2px; }
+  .filtered-warning code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    background: rgba(255,255,255,0.6);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  .answer { font-size: 15px; line-height: 1.7; color: var(--text); padding-top: 24px; border-top: 1px solid var(--border-light); }
+  .answer p { margin-bottom: 14px; }
+  .answer strong { font-weight: 600; }
+  .answer h2, .answer h3 { font-weight: 600; margin: 24px 0 10px; letter-spacing: -0.2px; }
+  .answer h2 { font-size: 17px; } .answer h3 { font-size: 15px; }
+  .answer ul, .answer ol { margin: 8px 0 16px 22px; }
+  .answer li { margin-bottom: 6px; }
+  .answer code { font-family: 'JetBrains Mono', monospace; font-size: 13px; background: var(--surface-hover); padding: 1px 6px; border-radius: 3px; }
+  .answer a { color: var(--primary); text-decoration: none; } .answer a:hover { text-decoration: underline; }
+
+  .citation { display: inline-flex; align-items: center; justify-content: center; min-width: 18px; height: 18px; padding: 0 5px; font-size: 10px; font-weight: 600; background: var(--primary-soft); color: var(--primary); border-radius: 10px; text-decoration: none; margin: 0 2px; vertical-align: super; line-height: 1; }
+  .citation:hover { background: var(--primary); color: white; }
+  .citation.doc { background: var(--success-soft); color: var(--success); }
+  .citation.doc:hover { background: var(--success); color: white; }
+
+  .sources-section { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--border-light); }
+  .sources-label { font-size: 10px; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; margin-bottom: 14px; }
+  .source-card { display: flex; align-items: flex-start; gap: 14px; padding: 12px 14px; border: 1px solid var(--border-light); border-radius: var(--radius); margin-bottom: 8px; transition: all 0.15s; text-decoration: none; color: inherit; }
+  .source-card:hover { border-color: var(--border); background: var(--surface-soft); }
+  .source-num { flex-shrink: 0; width: 22px; height: 22px; background: var(--primary-soft); color: var(--primary); font-size: 11px; font-weight: 600; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .source-card.doc-source .source-num { background: var(--success-soft); color: var(--success); }
+  .source-info { flex: 1; min-width: 0; }
+  .source-title { font-size: 13px; color: var(--text); font-weight: 500; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .source-url { font-size: 11px; color: var(--text-tertiary); margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: 'JetBrains Mono', monospace; }
+
+  .loading-card { background: var(--surface); border: 1px solid var(--border-light); border-radius: 14px; padding: 56px 40px; text-align: center; box-shadow: var(--shadow-1); }
+  .loader { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; width: 32px; height: 32px; margin: 0 auto; }
+  .loader div { border-radius: 2px; animation: pulse 1.2s ease-in-out infinite; }
+  .loader div:nth-child(1) { background: var(--ms-red); animation-delay: 0s; }
+  .loader div:nth-child(2) { background: var(--ms-green); animation-delay: 0.15s; }
+  .loader div:nth-child(3) { background: var(--ms-blue); animation-delay: 0.45s; }
+  .loader div:nth-child(4) { background: var(--ms-yellow); animation-delay: 0.3s; }
+  @keyframes pulse { 0%, 60%, 100% { opacity: 0.3; transform: scale(0.85); } 30% { opacity: 1; transform: scale(1); } }
+  .loading-text { margin-top: 20px; font-size: 13px; color: var(--text-secondary); }
+  .loading-timer { margin-top: 8px; font-size: 13px; font-weight: 500; color: var(--primary); font-variant-numeric: tabular-nums; }
+  .loading-reassure { margin-top: 14px; font-size: 12px; color: var(--text-tertiary); opacity: 0; transition: opacity 0.4s; }
+  .loading-reassure.show { opacity: 1; }
+
+  .error-card { background: #fff5f5; border: 1px solid #fed7d7; border-radius: var(--radius); padding: 16px 20px; font-size: 13px; color: var(--text); }
+  .error-card strong { color: var(--danger); }
+
+  footer { position: fixed; bottom: 0; left: 0; right: 0; padding: 12px 32px; background: var(--surface); border-top: 1px solid var(--border-light); font-size: 11px; color: var(--text-tertiary); display: flex; justify-content: space-between; letter-spacing: 0.2px; }
+
+  body.has-results { padding-bottom: 60px; }
+  body.has-results .hero { padding-top: 32px; }
+  body.has-results .logo { font-size: 26px; }
+  body.has-results .mentor-mark { width: 28px; height: 28px; }
+  body.has-results .tagline { display: none; }
+  body.has-results .examples { display: none; }
+
+  @media (max-width: 700px) {
+    .topbar { padding: 12px 16px; flex-wrap: wrap; }
+    .model-btn { padding: 5px 10px; font-size: 11px; }
+    .model-btn .cost { display: none; }
+    .hero { padding: 60px 20px 0; }
+    .logo { font-size: 34px; }
+    .mentor-mark { width: 38px; height: 38px; }
+    .search-input { font-size: 15px; }
+    .answer-card { padding: 22px; }
+    .results { padding: 0 20px 60px; }
+    footer { position: static; }
+    .examples { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="logo-wrapper">
+    <div class="mentor-mark" aria-hidden="true">
+      <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer ring -->
+        <circle cx="24" cy="24" r="22" fill="none" stroke="#e5e7eb" stroke-width="1.5"/>
+        <!-- North arrow (primary, pointing up — the guiding direction) -->
+        <path d="M24 6 L30 26 L24 22 L18 26 Z" fill="#0078D4"/>
+        <!-- South arrow (subtle counterweight) -->
+        <path d="M24 42 L18 22 L24 26 L30 22 Z" fill="#0078D4" opacity="0.25"/>
+        <!-- Center dot — the mentor anchor -->
+        <circle cx="24" cy="24" r="2.5" fill="#1a1a1a"/>
+      </svg>
+    </div>
+    <div class="logo">Partner <strong>Mentor</strong></div>
+  </div>
+  <div class="tagline">A guided assistant for new MAICPP partners</div>
+
+  <div class="search-wrapper">
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      <textarea class="search-input" id="prompt" rows="1" placeholder="Ask about designations, specializations, capability scores, FY26 benefits…"></textarea>
+      <button class="search-clear" id="clear-btn" style="display:none;" onclick="clearPrompt()" aria-label="Clear">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="submit-btn" id="submit-btn">Search</button>
+  </div>
+
+  <div class="examples">
+    <button class="example-link" data-q="How do I qualify for the Solutions Partner — AI designation?">AI designation</button>
+    <button class="example-link" data-q="What are all the Microsoft certifications that are related with MAICPP Designations and Specializations?">Certifications</button>
+    <button class="example-link" data-q="How does the Partner Capability Score work and what threshold do I need?">Capability score</button>
+    <button class="example-link" data-q="What are the new Copilot, Healthcare, and Sovereign Cloud specializations?">New specializations</button>
+  </div>
+</div>
+
+<div class="results" id="results"></div>
+
+<div class="footer-disclaimer">
+  An independent effort by Bryan Pang to help new partners navigate MAICPP. Not affiliated with or endorsed by Microsoft. Always verify critical details against official Microsoft sources before acting.
+</div>
+
+<footer>
+  <span>Partner Mentor · an independent effort · not affiliated with Microsoft</span>
+</footer>
+
+<script>
+// ============================================================
+//  Partner Mentor — published version
+//  All AI calls go through the Cloudflare Worker, which holds
+//  the API key and the MAICPP reference documents.
+// ============================================================
+const promptInput = document.getElementById('prompt');
+const clearBtn = document.getElementById('clear-btn');
+promptInput.addEventListener('input', () => {
+  promptInput.style.height = 'auto';
+  promptInput.style.height = Math.min(promptInput.scrollHeight, 220) + 'px';
+  clearBtn.style.display = promptInput.value ? 'flex' : 'none';
+});
+promptInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); submit(); }
+});
+window.clearPrompt = () => {
+  promptInput.value = ''; promptInput.style.height = 'auto';
+  clearBtn.style.display = 'none'; promptInput.focus();
+};
+document.querySelectorAll('.example-link').forEach(btn => {
+  btn.onclick = () => {
+    promptInput.value = btn.dataset.q;
+    promptInput.dispatchEvent(new Event('input'));
+    submit();
+  };
+});
+document.getElementById('submit-btn').onclick = submit;
+
+async function submit() {
+  const question = promptInput.value.trim();
+  const results = document.getElementById('results');
+  if (!question) { promptInput.focus(); return; }
+
+  document.body.classList.add('has-results');
+  results.classList.add('visible');
+  const submitBtn = document.getElementById('submit-btn');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Searching…';
+
+  results.innerHTML = `
+    <div class="results-meta">
+      <span>Checking MAICPP reference documents</span>
+      <span>${new Date().toLocaleTimeString('en-US', {hour: '2-digit', minute: '2-digit'})}</span>
+    </div>
+    <div class="loading-card">
+      <div class="loader"><div></div><div></div><div></div><div></div></div>
+      <div class="loading-text" id="loading-text">Checking the reference documents…</div>
+      <div class="loading-timer" id="loading-timer">0:00</div>
+      <div class="loading-reassure" id="loading-reassure">Detailed questions can take up to a minute — hang tight, this is normal.</div>
+    </div>`;
+  results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  // Count-up timer + cycling status messages so users know it's working
+  const startTime = Date.now();
+  const phases = [
+    'Checking the reference documents…',
+    'Searching official Microsoft sources…',
+    'Cross-checking the details…',
+    'Writing your answer…'
+  ];
+  const timerEl = document.getElementById('loading-timer');
+  const textEl = document.getElementById('loading-text');
+  const reassureEl = document.getElementById('loading-reassure');
+  const loadingInterval = setInterval(() => {
+    const elapsed = Math.floor((Date.now() - startTime) / 1000);
+    const mins = Math.floor(elapsed / 60);
+    const secs = String(elapsed % 60).padStart(2, '0');
+    if (timerEl) timerEl.textContent = `${mins}:${secs}`;
+    // advance the status message every ~12 seconds
+    const phaseIdx = Math.min(Math.floor(elapsed / 12), phases.length - 1);
+    if (textEl && textEl.textContent !== phases[phaseIdx]) {
+      textEl.textContent = phases[phaseIdx];
+    }
+    // show the reassurance line once past 25 seconds
+    if (elapsed >= 25 && reassureEl) reassureEl.classList.add('show');
+  }, 1000);
+
+  try {
+    const result = await askWorker(question);
+    clearInterval(loadingInterval);
+    renderAnswer(question, result, ALLOWED_DOMAINS);
+  } catch (err) {
+    clearInterval(loadingInterval);
+    results.innerHTML = `
+      <div class="results-meta"><span>ERROR</span><span>${new Date().toLocaleTimeString()}</span></div>
+      <div class="error-card"><strong>Request failed.</strong> ${escapeHtml(err.message)}</div>`;
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Search';
+  }
+}
+
+// ============================================================
+//  Worker connection — the API key lives in the Cloudflare
+//  Worker, never in this page. This page only knows the
+//  Worker's URL and sends questions to it.
+// ============================================================
+const WORKER_URL = 'https://standard.partner-mentor123.workers.dev';
+
+// Allowed Microsoft web domains — used only for citation validation
+// in renderAnswer(). The actual web search is enforced by the Worker.
+const ALLOWED_DOMAINS = [
+  'partner.microsoft.com',
+  'learn.microsoft.com',
+  'microsoft.com/en-us/partner',
+  'techcommunity.microsoft.com',
+  'devblogs.microsoft.com',
+  'aka.ms'
+];
+
+async function askWorker(question) {
+  let response;
+  try {
+    response = await fetch(WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question })
+    });
+  } catch (e) {
+    throw new Error('Could not reach the assistant. Please check your connection and try again.');
+  }
+
+  let data;
+  try {
+    data = await response.json();
+  } catch {
+    throw new Error('The assistant returned an unexpected response. Please try again.');
+  }
+
+  if (!response.ok) {
+    // The Worker sends a friendly { error: "..." } message
+    throw new Error(data && data.error ? data.error : `Request failed (HTTP ${response.status}).`);
+  }
+  return data;
+}
+
+function isUrlFromAllowedDomain(url, allowedDomains) {
+  try {
+    const u = new URL(url);
+    const hostPath = u.hostname + u.pathname;
+    return allowedDomains.some(allowed => {
+      // Normalize: strip any protocol or trailing slash from the allowed entry
+      const norm = allowed.replace(/^https?:\/\//, '').replace(/\/$/, '').toLowerCase();
+      // Match if hostname ends with the allowed domain, OR hostname+path starts with it (for path-restricted entries)
+      const hostname = u.hostname.toLowerCase();
+      if (norm.includes('/')) {
+        // Path-restricted, e.g. microsoft.com/en-us/partner
+        return hostPath.toLowerCase().startsWith(norm) || hostPath.toLowerCase().includes('/' + norm);
+      }
+      return hostname === norm || hostname.endsWith('.' + norm);
+    });
+  } catch {
+    return false;
+  }
+}
+
+function renderAnswer(question, data, allowedDomains) {
+  const results = document.getElementById('results');
+  const webSources = [];
+  const rejectedSources = [];
+  const seenUrls = new Map();
+  let rawText = '';
+  for (const block of (data.content || [])) {
+    if (block.type === 'text') {
+      let text = block.text;
+      if (block.citations) {
+        for (const c of block.citations) {
+          if (c.type === 'web_search_result_location' && !seenUrls.has(c.url)) {
+            // SECOND LINE OF DEFENSE: validate every citation URL against allowed domains
+            if (isUrlFromAllowedDomain(c.url, allowedDomains)) {
+              const idx = webSources.length + 1;
+              seenUrls.set(c.url, idx);
+              webSources.push({ num: idx, title: c.title || c.url, url: c.url });
+            } else {
+              seenUrls.set(c.url, -1); // mark as rejected
+              rejectedSources.push({ title: c.title || c.url, url: c.url });
+            }
+          }
+        }
+      }
+      rawText += text;
+    }
+  }
+
+  let sourceType = null;
+  const sourceMatch = rawText.match(/^\s*\[SOURCE:\s*(DOC\+WEB|DOC|WEB|NONE)\]\s*\n?/i);
+  if (sourceMatch) { sourceType = sourceMatch[1].toUpperCase(); rawText = rawText.substring(sourceMatch[0].length); }
+
+  let html = renderMarkdown(rawText);
+  html = html.replace(/\[(\d+)\]/g, (match, n) => {
+    const num = parseInt(n);
+    if (num >= 1 && num <= webSources.length)
+      return `<a class="citation" href="${escapeAttr(webSources[num-1].url)}" target="_blank" rel="noopener">${num}</a>`;
+    // Citation refers to a rejected/non-existent source — strip it from the visible output
+    return '';
+  });
+  html = html.replace(/\[DOC(?::[^\]]+)?\]/g, () => `<span class="citation doc" title="From the MAICPP reference documents">DOC</span>`);
+
+  let badgeHtml = '';
+  if (sourceType === 'DOC') badgeHtml = `<div class="source-badge doc">Answered from the MAICPP reference documents</div>`;
+  else if (sourceType === 'WEB') badgeHtml = `<div class="source-badge web">Answered from Microsoft web sources</div>`;
+  else if (sourceType === 'DOC+WEB') badgeHtml = `<div class="source-badge both">Combined: reference documents and Microsoft web</div>`;
+  else if (sourceType === 'NONE') badgeHtml = `<div class="source-badge web">Answer not found in available sources</div>`;
+
+  let cards = '';
+  if (sourceType === 'DOC' || sourceType === 'DOC+WEB') {
+    cards += `<div class="source-card doc-source">
+        <div class="source-num">D</div>
+        <div class="source-info">
+          <div class="source-title">MAICPP reference documents</div>
+          <div class="source-url">Curated Microsoft partner program guidance</div>
+        </div>
+      </div>`;
+  }
+  cards += webSources.map(s => `
+    <a class="source-card" href="${escapeAttr(s.url)}" target="_blank" rel="noopener">
+      <div class="source-num">${s.num}</div>
+      <div class="source-info">
+        <div class="source-title">${escapeHtml(s.title)}</div>
+        <div class="source-url">${escapeHtml(formatUrl(s.url))}</div>
+      </div>
+    </a>`).join('');
+  const sourcesHtml = cards ? `<div class="sources-section"><div class="sources-label">Sources</div>${cards}</div>` : '';
+
+  // Build a warning if any sources were filtered out
+  let filteredWarning = '';
+  if (rejectedSources.length > 0) {
+    const rejectedHosts = [...new Set(rejectedSources.map(r => { try { return new URL(r.url).hostname; } catch { return r.url; } }))];
+    filteredWarning = `<div class="filtered-warning">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L1 21h22L12 2zm0 3.83L19.53 19H4.47L12 5.83zM11 10v4h2v-4h-2zm0 6v2h2v-2h-2z"/></svg>
+      <div>
+        <strong>${rejectedSources.length} source${rejectedSources.length === 1 ? '' : 's'} blocked.</strong>
+        The assistant attempted to cite ${rejectedHosts.map(h => `<code>${escapeHtml(h)}</code>`).join(', ')} — not an approved Microsoft source. Those citations were removed from the answer.
+      </div>
+    </div>`;
+  }
+
+  const sourceCount = (sourceType === 'DOC' || sourceType === 'DOC+WEB')
+    ? `Reference documents${webSources.length ? ' · ' + webSources.length + ' web source' + (webSources.length === 1 ? '' : 's') : ''}`
+    : `${webSources.length} web source${webSources.length === 1 ? '' : 's'}`;
+
+  results.innerHTML = `
+    <div class="results-meta">
+      <span>${sourceCount}</span>
+      <span>${new Date().toLocaleTimeString('en-US', {hour:'2-digit',minute:'2-digit'})}</span>
+    </div>
+    <div class="answer-card">
+      <div class="question-label">Question</div>
+      <div class="question-text">${escapeHtml(question)}</div>
+      ${badgeHtml}
+      ${filteredWarning}
+      <div class="answer">${html}</div>
+      ${sourcesHtml}
+    </div>`;
+}
+
+function formatUrl(url) {
+  try { const u = new URL(url); return u.hostname + u.pathname; } catch { return url; }
+}
+function renderMarkdown(text) {
+  text = escapeHtml(text);
+  text = text.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+  text = text.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+  text = text.replace(/^# (.+)$/gm, '<h2>$1</h2>');
+  text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  text = text.replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g, '<em>$1</em>');
+  text = text.replace(/`([^`]+)`/g, '<code>$1</code>');
+  text = text.replace(/^[\-\*] (.+)$/gm, '<li>$1</li>');
+  text = text.replace(/(<li>.+?<\/li>\n?)+/gs, m => `<ul>${m}</ul>`);
+  text = text.replace(/^(\d+)\. (.+)$/gm, '<li>$2</li>');
+  text = text.split(/\n\n+/).map(p => {
+    if (/^<(h[23]|ul|ol|li)/.test(p.trim())) return p;
+    return `<p>${p.replace(/\n/g, '<br>')}</p>`;
+  }).join('');
+  return text;
+}
+function escapeHtml(str) { return String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function escapeAttr(str) { return escapeHtml(str); }
+</script>
+</body>
+</html>
