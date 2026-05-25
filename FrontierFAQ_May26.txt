@@ -1,0 +1,409 @@
+==============================================================
+FRONTIER PARTNER SPECIALIZATION — FAQ
+Source: Frontier Partner Specialization FAQ
+Document last updated: May 4, 2026
+Knowledge file prepared: May 2026
+==============================================================
+
+DISCLAIMER (from source document)
+This content is provided for discussion and general information
+purposes only. It is not a recommendation or guarantee of success.
+The information is subject to change and is not an offer, endorsement,
+guarantee, commitment, or representation by Microsoft. All business
+decisions (strategy, solutions, partner selection, implementation,
+etc.) rest solely with the partner's own business.
+
+==============================================================
+SECTION 1 — OVERVIEW
+==============================================================
+
+TOPIC: What is the Frontier Partner specialization?
+The Frontier Partner specialization is the premier recognition for
+Scale Solution Providers, resellers, and systems integrators (SIs)
+that can design, build, deploy, govern, and secure AI agents across
+the full Microsoft Frontier Transformation stack. That stack includes
+Microsoft 365 Copilot, Microsoft GitHub, Microsoft Azure AI Foundry,
+Microsoft Fabric, and key security products.
+It was announced at the State of the Partner Ecosystem 2026.
+It is the next evolution of partner recognition for the AI agent era.
+It replaces the previous Frontier Partner badge with a more rigorous,
+audited credential. The credential gives customers and Microsoft field
+teams a verified signal of a partner organization's end-to-end
+capabilities.
+Partners who earn it gain stronger differentiation with customers,
+deeper visibility with Microsoft field teams, and access to a richer
+set of Microsoft AI Cloud Partner Program benefits than the badge
+provided.
+
+TOPIC: How is the specialization different from the current Frontier
+Partner badge?
+The specialization raises the bar from the badge across three
+dimensions: which specializations are required, the skilling
+investment expected from the partner's team, and the addition of an
+annual agentic audit.
+
+Side-by-side comparison of requirements:
+
+- REQUIRED SPECIALIZATIONS
+  Frontier Partner badge (current): Microsoft Copilot, Data Security,
+  and one of three Azure AI specializations — AI Apps on Microsoft
+  Azure, AI Platform on Microsoft Azure, or Agentic DevOps with
+  Microsoft Azure and GitHub.
+  Frontier Partner specialization (future): Microsoft Copilot; AI Apps
+  on Microsoft Azure OR AI Platform on Microsoft Azure; Data Security;
+  and Identity & Access Management.
+
+- SKILLING
+  Frontier Partner badge (current): None.
+  Frontier Partner specialization (future): Five individuals complete
+  the Frontier Transformation Engineer learning path; three
+  individuals earn the Fabric Analytics Engineer Associate
+  certification (DP-600).
+
+- AUDIT
+  Frontier Partner badge (current): None.
+  Frontier Partner specialization (future): An annual audit validating
+  capability to design, build, deploy, govern, and secure AI agents
+  across the Frontier stack.
+
+- EVALUATION CADENCE
+  Frontier Partner badge (current): Rolling 10-day window.
+  Frontier Partner specialization (future): Annual assessment.
+  The change to an annual assessment gives partners a more stable and
+  predictable path to maintain the credential.
+
+TOPIC: Who is the specialization designed for?
+It is designed for Scale Solution Providers, systems integrators, and
+resellers that serve enterprise, small and medium-sized business
+(SMB), and small, medium, and corporate (SMC) customers across all
+industries. Specifically, it recognizes partners that work directly
+with customers to design, build, deploy, and manage AI agents as part
+of their delivery practice.
+If a partner's business model primarily focuses on enabling other
+resellers or managing channel distribution rather than direct customer
+delivery, the Frontier Distributor designation is the more relevant
+offering.
+
+TOPIC: Why is Microsoft introducing this now?
+AI has moved from pilots to production. Customers are deploying agents,
+embedding them in business processes, and expecting governance,
+security, and measurable outcomes from day one.
+Microsoft Frontier Transformation is the framework for how partners
+design, build, deploy, govern, and secure AI agents across Azure,
+M365, GitHub, and key security products. The specialization recognizes
+partners who can deliver across that entire platform, not just
+individual products.
+It expands on the badge to give customers and Microsoft sellers high
+confidence when choosing a provider: partners who hold it have been
+vetted, not just enrolled.
+
+==============================================================
+SECTION 2 — REQUIREMENTS
+==============================================================
+
+TOPIC: What are the specific requirements to earn the specialization?
+Partners must meet all three of the following components
+simultaneously, all associated with the same Partner Global Account.
+
+COMPONENT 1 — Four specializations (held at the same time on the same
+Partner Global Account):
+  - Microsoft Copilot (with audit)
+  - AI Apps on Microsoft Azure OR AI Platform on Microsoft Azure
+  - Data Security
+  - Identity & Access Management
+
+COMPONENT 2 — Skilling:
+  - Five individuals complete the forthcoming Frontier Transformation
+    Engineer learning path and receive the associated badge.
+  - Three individuals earn the Fabric Analytics Engineer Associate
+    certification (DP-600).
+  - The individuals earning the Frontier Transformation Engineer
+    badge and those earning DP-600 can be the same or different
+    people, but all must be associated with the same Partner Global
+    Account.
+
+COMPONENT 3 — Agentic audit:
+  - An annual audit validating the organization's ability to design,
+    build, deploy, govern, and secure AI agents across Copilot,
+    Copilot Studio, GitHub, Fabric, Foundry, and agent security
+    controls.
+  - NOTE: The exact audit criteria are still being finalized.
+    Microsoft's team will contact partners by email when more details
+    are available.
+
+TOPIC: What is the Frontier Transformation Engineer learning path?
+To earn the specialization, five individuals must complete the
+forthcoming Frontier Transformation Engineer learning path. It is a
+training course designed for solutions engineers and solutions
+architects. Those who complete the course receive a badge signifying
+their skills. The learning path comprises 80+ hours of learning
+organized into three stages:
+
+  STAGE 1 — Certifications (available now): Three certifications
+  establish the technical foundation:
+    - GH-300 GitHub Copilot Associate
+    - AI-102 / AI-103 Azure AI Engineer Associate
+    - AB-100 Agentic AI Business Solutions Architect
+
+  STAGE 2 — Project-ready workshops (available June 2026): Hands-on
+  delivery training across:
+    - M365 Copilot + Copilot Studio
+    - GitHub Copilot + Azure AI Foundry
+    - Data Infrastructure + Analytics (Fabric)
+    - AI Governance
+
+  STAGE 3 — Frontier COE & Hypervelocity Engineering (available June
+  2026): Advanced content covering AI Center of Excellence creation,
+  the Hypervelocity Engineering Framework, and industry-specific agent
+  development.
+
+The associated badge becomes available to an individual once all three
+stages are complete. Detailed learning path information and enrollment
+options are available through the Partner Skilling Hub. The Frontier
+Engineer Launch Summit is scheduled for partners on June 9, with
+registration at aka.ms/FrontierPartnerSummit.
+
+TOPIC: Do all five Frontier Transformation Engineers need to earn the
+same certifications?
+Yes. Each individual completing the Frontier Transformation Engineer
+learning path follows the same path, including all required
+certifications and project-ready workshops. The five individuals can
+be drawn from across the organization and do not need to be in the
+same role, team, or geography, as long as all are associated with the
+same Partner Global Account.
+
+TOPIC: What does the agentic audit evaluate?
+The audit validates the organization's real-world capability to
+deliver agents across the Frontier stack. While certifications show
+that the organization has invested in the necessary skilling, the
+audit demonstrates that the team can design, build, deploy, govern,
+and secure agents in customer environments using Copilot, Copilot
+Studio, GitHub Copilot, Azure AI Foundry, Microsoft Fabric, and agent
+security controls including Defender, Entra, and Purview.
+Additional details on audit criteria and the assessment process will
+be made available ahead of the July 2026 general availability.
+Partners with questions in the meantime can ask their Microsoft
+contact to connect them to the right resources.
+
+==============================================================
+SECTION 3 — BENEFITS
+==============================================================
+
+TOPIC: What benefits do partners receive when they earn the
+specialization?
+The specialization comes with a richer benefit bundle than the current
+badge. The benefits span four key areas:
+
+  - CUSTOMER & SELLER DIFFERENTIATION: A customer-facing
+    specialization badge that can be used in marketing materials, plus
+    visibility with Microsoft field sellers — so the organization is
+    surfaced when customers search for validated agentic AI delivery
+    capability.
+
+  - CO-SELL: Expanded co-sell eligibility, creating direct revenue
+    upside for partners who have invested in full-stack Frontier
+    delivery.
+
+  - PRODUCT BENEFITS: Access to Microsoft Agent Pre-Purchase Plan (P3)
+    credits and Microsoft 365 E7 product licensing for internal use,
+    enabling the team to build, test, and demonstrate agents on the
+    Microsoft platform.
+
+  - MARKETING RESOURCES: Go-to-market (GTM) resources, including
+    Partner of the Year Award eligibility, sponsored AI coaching, case
+    study opportunities, and an executive press release template.
+
+Additional GTM benefit details will be shared closer to the July 2026
+general availability.
+
+TOPIC: Do partners keep their Frontier Partner badge benefits while
+working toward the specialization?
+Yes. If a partner is currently enrolled in the Frontier Partner badge,
+existing badge benefits remain fully in place during the transition.
+The specialization is the path forward, and Microsoft is committed to
+supporting badge holders through their progression. Badge benefits
+remain intact until the next anniversary date of the badge, so the
+partner has access to them while working toward the new requirements.
+
+==============================================================
+SECTION 4 — TRANSITION FOR CURRENT FRONTIER PARTNER BADGE HOLDERS
+==============================================================
+
+TOPIC: A partner currently holds the Frontier Partner badge — what
+does this change mean for them?
+The Frontier Partner badge will be retired at the end of FY27. As a
+current badge holder, the partner will have access to resources to
+help attain the specialization:
+  - The partner is part of a select group that Microsoft wants to
+    transition to the specialization as a priority. The partner's
+    Microsoft contact will reach out directly to support the path. If
+    the partner has no assigned Microsoft contact, a member of the
+    Microsoft AI Cloud Partner Program Concierge team will reach out.
+  - The partner keeps the badge as long as they continue to meet the
+    badge requirements in FY27, or until they enroll in the
+    specialization, whichever is sooner.
+  - Current badge benefits remain in place during the transition.
+
+WHITE-GLOVE SUPPORT FOR BADGE HOLDERS: The Microsoft AI Cloud Partner
+Program Concierge team will reach out directly to support the partner
+on the Frontier Transformation Engineer learning path and the DP-600
+skilling requirements. If the partner needs to close any remaining
+specialization prerequisites, the Concierge team will also be in
+contact to help build a plan.
+
+TOPIC: Why is Microsoft raising the bar now?
+Microsoft Frontier Transformation is the framework for how partners
+design, build, deploy, govern, and secure AI agents across Azure,
+M365, GitHub, and key security products. The specialization expands on
+the badge to signal to customers and sellers that a partner can
+deliver across the entire stack, not just parts of it. The
+requirements reflect the capabilities required to deliver Frontier
+Transformation end-to-end at production scale.
+
+TOPIC: Will a partner's badge automatically convert to the
+specialization?
+No. The specialization requires meeting the new criteria, including
+the four prerequisite specializations, the skilling requirements, and
+passing the audit. Holding the badge does not automatically grant the
+specialization. However, badge holders receive meaningful transition
+support, including the ability to maintain the badge during FY27 as
+long as requirements are met, and direct outreach from Microsoft
+Partner Concierge teams to help plan and close any remaining gaps.
+
+==============================================================
+SECTION 5 — TIMELINE & ELIGIBILITY
+==============================================================
+
+TOPIC: When can partners enroll?
+The Frontier Partner specialization will be announced at MCAPS Start
+for Partners on July 22, 2026, with enrollment opening at the same
+time. Partners who currently hold the Frontier Partner badge are
+invited to opt in to a private preview ahead of general availability;
+Microsoft will reach out directly via email to those organizations.
+Certification training for the Frontier Transformation Engineer
+learning path is available now. Project-ready workshops begin in June
+2026.
+
+TOPIC: How does a partner check where their organization stands
+against the requirements today?
+Partner Center admins can check the status of the prerequisite
+specializations directly in the Partner Center Membership Workspace
+today. The specializations overview page displays which of the four
+required specializations the organization currently holds and which
+remain outstanding.
+Partners with questions about their current status can ask their
+Microsoft contacts for help assessing their position.
+
+TOPIC: A partner meets most requirements but has one or two gaps — is
+support available?
+Yes. The Partner Concierge team actively works with partners who are
+close to qualifying to help identify gaps and build a plan to close
+them. If a partner has been contacted by Microsoft about the
+specialization, this support is already part of the transition
+experience. If a partner has not been contacted and believes they are
+close to qualifying, they should reach out to their Partner
+Development Manager (PDM) or Partner Technology Strategist (PTS) to get
+connected with Partner Concierge. Concierge engagements begin in June.
+
+==============================================================
+SECTION 6 — MICROSOFT AI CLOUD PARTNER PROGRAM LANDSCAPE
+==============================================================
+
+TOPIC: How does the Frontier Partner specialization fit into the
+broader Microsoft AI Cloud Partner Program?
+The Frontier Partner specialization is one of several program
+offerings Microsoft is introducing as part of the Frontier
+Transformation framework. There are two key offerings that validate
+Frontier Transformation capabilities:
+  - For channel/SI partners (Scale Solution Providers, indirect
+    resellers, systems integrators): the Frontier Partner
+    specialization recognizes hands-on delivery capability for
+    customers.
+  - For Cloud Solution Provider (CSP) distributors: the Frontier
+    Distributor designation recognizes channel enablement capability.
+
+TOPIC: How is the Frontier Partner specialization different from the
+Frontier Distributor designation?
+They target different partner business models:
+  - The Frontier Partner specialization is for partners that work
+    directly with customers to design, build, deploy, and manage AI
+    agents. It recognizes hands-on technical delivery capability
+    across the full Microsoft Frontier stack.
+  - The Frontier Distributor designation is for CSP distributors whose
+    role is to enable their indirect reseller channel to build,
+    deploy, and manage agents. It recognizes channel enablement and
+    capability, not direct customer delivery.
+In short: the specialization is about delivering agents to customers;
+the distributor designation is about enabling partners and growing
+agent sales through the channel. Partners should pursue the offering
+that best suits their business model. In some cases, both may be
+pursued.
+
+==============================================================
+SECTION 7 — GETTING STARTED
+==============================================================
+
+TOPIC: What should a partner organization do right now?
+The most important near-term action is to start the skilling track —
+specifically, enroll individuals in the Frontier Transformation
+Engineer learning path. Certification training is available today and
+does not require waiting for enrollment to open in July 2026.
+Beyond skilling, the recommended actions are:
+  - Register for the Frontier Engineer Launch Summit on June 9 at
+    aka.ms/FrontierPartnerSummit.
+  - Check specialization status: in the Partner Center Membership
+    Workspace, the Partner Center admin can view which of the four
+    prerequisite specializations the organization holds and identify
+    any gaps.
+  - Identify five individuals for the Frontier Transformation Engineer
+    learning path and three individuals for DP-600. They can be the
+    same or different people. Starting now can reduce the total time
+    to specialization eligibility.
+  - Engage the PDM or PTS with questions about readiness or for
+    support in building a plan.
+
+TOPIC: Where can a partner learn more?
+Resources to learn more about the Frontier Partner specialization:
+  - Partner Center Membership Workspace: check current specialization
+    status.
+  - Partner Skilling Hub: enroll in the Frontier Transformation
+    Engineer learning path and access role-based resources.
+  - State of the Partner Ecosystem 2026 blog: Nicole Dezen's overview
+    of Frontier Transformation and partner program direction.
+  - The partner's Partner Development Manager or Partner Technology
+    Strategist: continue the readiness conversation and make a plan to
+    close requirement gaps.
+If a partner was contacted by Microsoft about the specialization,
+their Microsoft contact is the primary point of support for questions
+not answered here.
+
+==============================================================
+QUICK-REFERENCE KEY FACTS
+==============================================================
+- Credential name: Frontier Partner specialization (replaces the
+  Frontier Partner badge).
+- Announced: State of the Partner Ecosystem 2026.
+- General availability / enrollment opens: July 22, 2026, at MCAPS
+  Start for Partners.
+- Private preview: available to current Frontier Partner badge holders
+  ahead of GA (Microsoft contacts them by email).
+- Frontier Partner badge retirement: end of FY27.
+- Four required specializations: Microsoft Copilot; AI Apps on
+  Microsoft Azure OR AI Platform on Microsoft Azure; Data Security;
+  Identity & Access Management.
+- Skilling: 5 individuals complete the Frontier Transformation
+  Engineer learning path; 3 individuals earn DP-600 (Fabric Analytics
+  Engineer Associate).
+- Learning path: 80+ hours, 3 stages; foundation certifications are
+  GH-300, AI-102/AI-103, AB-100.
+- Audit: annual agentic audit (criteria still being finalized).
+- Evaluation cadence: annual assessment (was a rolling 10-day window
+  for the badge).
+- Key event: Frontier Engineer Launch Summit, June 9
+  (aka.ms/FrontierPartnerSummit).
+- Project-ready workshops and Concierge engagements: begin June 2026.
+- All requirements must be held against the same Partner Global
+  Account.
+==============================================================
+END OF DOCUMENT
+==============================================================
